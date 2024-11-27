@@ -1,0 +1,34 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #fafafa;
+    background-color: #252529;
+}
+
+img {
+    max-height: 75%;
+    max-width: 75%;
+    border-radius: 50%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fafafa !important;
+}
+
+a:hover {
+    color: #ffa200 !important;
+}
+
+.links {
+    color: #ffa200 !important;
+}
+
+.page-content {
+    padding-top: 100px;
+}
