@@ -3,7 +3,8 @@ html, body {
     padding: 0;
     height: 100%;
     color: #fafafa;
-    background-color: #252529;
+    background-color: #212529;
+    overflow-x: hidden;
 }
 
 img {
@@ -31,4 +32,9 @@ a:hover {
 
 .page-content {
     padding-top: 100px;
+}
+
+.navbar {
+    background: linear-gradient(to bottom, #212529 0%, rgba(33, 37, 41, 0) 90%) !important;
+    margin-bottom: 25px;
 }
