@@ -4,5 +4,14 @@
 {% block content %}
 <div class="container page-content">
     <h2>Want to get in touch?</h2>
+    <div class="row">
+        <div class="col-md-9">
+            <form method="post" class="mt-3">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-secondary">Submit Message</button>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}

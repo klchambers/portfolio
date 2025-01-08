@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import ContactForm
 
 
 def home(request):
@@ -10,7 +11,15 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'home/contact.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Handle form submission, e.g., save to database, send email, etc.
+            form.save()  # or whatever you want to do with the data
+    else:
+        form = ContactForm()
+
+    return render(request, 'home/contact.html', {'form': form})
 
 
 def projects(request):

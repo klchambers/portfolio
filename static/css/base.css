@@ -26,6 +26,10 @@ a:hover {
     color: #cf87e9 !important;
 }
 
+.btn-secondary:hover {
+    background-color: #cf87e9 !important;
+}
+
 .links {
     color: #cf87e9 !important;
 }
