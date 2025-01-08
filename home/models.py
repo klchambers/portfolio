@@ -11,5 +11,5 @@ class HomePage(models.Model):
 
 class ContactRequest(models.Model):
     name = models.CharField(max_length=100)
-    message = models.CharField(max_length=254)
+    message = models.TextField(max_length=254)
     email = models.EmailField()

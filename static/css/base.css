@@ -17,6 +17,10 @@ ul {
     list-style-type: none;
 }
 
+form, label {
+    padding-right: 50px;
+}
+
 a {
     text-decoration: none;
     color: #fafafa !important;
@@ -42,3 +46,33 @@ a:hover {
     background: linear-gradient(to bottom, #212529 0%, rgba(33, 37, 41, 0) 90%) !important;
     margin-bottom: 25px;
 }
+
+.form-control {
+    background-color: #212529; /* Adjust the color as needed */
+    color: #fafafa;
+  }
+
+/* Flexbox layout for form fields */
+.form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .form-container label {
+    width: 120px; /* Adjust as needed */
+    margin-right: 10px;
+    text-align: right;
+  }
+  
+  .form-container input,
+  .form-container textarea {
+    flex-grow: 1;
+    width: 85%;
+  }
