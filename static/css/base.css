@@ -75,3 +75,9 @@ a:hover {
   .form-container textarea {
     width: 70%;
   }
+
+  @media (max-width: 767px) {
+    .navbar-collapse > ul > li > a {
+        font-size: larger;
+    }
+}
