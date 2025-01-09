@@ -43,7 +43,7 @@ a:hover {
 }
 
 .navbar {
-    background: linear-gradient(to bottom, #212529 0%, rgba(33, 37, 41, 0) 90%) !important;
+    background: linear-gradient(to bottom, #212529 95%, rgba(33, 37, 41, 0) 99%) !important;
     margin-bottom: 25px;
 }
 
@@ -61,7 +61,6 @@ a:hover {
   .form-container p {
     display: flex;
     flex-direction: row;
-    align-items: center;
     margin-bottom: 10px;
   }
   
@@ -74,5 +73,5 @@ a:hover {
   .form-container input,
   .form-container textarea {
     flex-grow: 1;
-    width: 85%;
+    width: 80%;
   }
