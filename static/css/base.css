@@ -66,13 +66,12 @@ a:hover {
   }
   
   .form-container label {
-    width: 120px; /* Adjust as needed */
+    width: 120px;
     margin-right: 10px;
     text-align: right;
   }
   
   .form-container input,
   .form-container textarea {
-    flex-grow: 1;
-    width: 80%;
+    width: 70%;
   }
