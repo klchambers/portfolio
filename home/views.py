@@ -6,15 +6,8 @@ from django.contrib import messages
 import logging
 
 
-def home(request):
-    return render(request, 'home/home.html')
-
-
-def about(request):
-    return render(request, 'home/about.html')
-
-
-def contact(request):
+def portfolio(request):
+    # Handling contact form submission
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -47,8 +40,4 @@ def contact(request):
     else:
         form = ContactForm()
 
-    return render(request, 'home/contact.html', {'form': form})
-
-
-def projects(request):
-    return render(request, 'home/projects.html')
+    return render(request, 'home/home.html', {'form': form})
