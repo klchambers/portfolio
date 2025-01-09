@@ -34,7 +34,7 @@ def contact(request):
                 send_mail(subject,
                           message,
                           settings.DEFAULT_FROM_EMAIL,
-                          settings.DEFAULT_TO_EMAIL)
+                          [settings.DEFAULT_TO_EMAIL])
             except Exception as e:
                 logging.error(f'Error sending your message: {e}')
                 raise
