@@ -51,16 +51,31 @@
             </div>
         </div>
     </nav>
-{% block content %}
-{% endblock %}
-<footer class="text-center">
-    <hr>
-    <div class="row">
-        <div class="col">
-            <a href="https://github.com/klchambers"><i class="fa-brands fa-github display-3"></i></a>
-            <a href="https://www.linkedin.com/in/kieranchamberskc/"><i class="fa-brands fa-linkedin display-3"></i></a>
+    <!-- displaying Django messages -->
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+            <div class="container-fluid p-0">
+                <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert" >
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                  </button>
+                  {{ message }}
+                </div>
+              </div>
+            {% endfor %}
         </div>
-    </div>
-</footer>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+    <footer class="text-center">
+        <hr>
+        <div class="row">
+            <div class="col">
+                <a href="https://github.com/klchambers"><i class="fa-brands fa-github display-3"></i></a>
+                <a href="https://www.linkedin.com/in/kieranchamberskc/"><i class="fa-brands fa-linkedin display-3"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

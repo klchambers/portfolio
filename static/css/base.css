@@ -31,6 +31,21 @@ a:hover {
     color: #cf87e9 !important;
 }
 
+.alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+.message-container {
+    position: relative; /* Ensures container doesn’t interfere with fixed positioning */
+}
+
 .btn-secondary:hover {
     background-color: #cf87e9 !important;
 }
