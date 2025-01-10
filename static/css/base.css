@@ -9,12 +9,6 @@ body {
   scroll-behavior: smooth !important;
 }
 
-img {
-  max-height: 75%;
-  max-width: 75%;
-  border-radius: 50%;
-}
-
 ul {
   list-style-type: none;
 }
@@ -107,13 +101,43 @@ a:hover {
   transform: scale(1.5);
 }
 
+.card {
+    border: none;
+}
+
 #submit-button {
   max-width: 50%;
   align-self: center;
+}
+
+#profile-photo {
+    max-height: 75%;
+    max-width: 75%;
+    border-radius: 50%;
 }
 
 @media (max-width: 767px) {
   .navbar-collapse > ul > li > a {
     font-size: larger;
   }
+}
+
+@media (min-width: 1200px) {
+    #portfolio-image {
+        max-height: 50%;
+        max-width: 50%;
+        border-radius: 100%;
+        position: relative;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    
+    #portfolio-image:hover {
+        border-radius: 3%; /* Remove the border-radius on hover */
+        z-index: 9999;  /* Bring image to the front on hover */
+        transform: scale(1.25);
+        display: block;
+    }
 }

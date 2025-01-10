@@ -1,40 +1,123 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    color: #fafafa;
-    background-color: #212529;
-    overflow-x: hidden;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: #fafafa;
+  background-color: #212529;
+  overflow-x: hidden;
+  scroll-behavior: smooth !important;
 }
 
 img {
-    max-height: 75%;
-    max-width: 75%;
-    border-radius: 50%;
+  max-height: 75%;
+  max-width: 75%;
+  border-radius: 50%;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
+}
+
+form,
+label {
+  padding-right: 25px;
 }
 
 a {
-    text-decoration: none;
-    color: #fafafa !important;
+  text-decoration: none;
+  color: #fafafa !important;
 }
 
 a:hover {
-    color: #ffa200 !important;
+  color: #cf87e9 !important;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+.message-container {
+  position: relative; /* Ensures container doesn’t interfere with fixed positioning */
+}
+
+.btn-secondary:hover {
+  background-color: #cf87e9 !important;
 }
 
 .links {
-    color: #ffa200 !important;
+  color: #cf87e9 !important;
 }
 
 .page-content {
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
 .navbar {
-    background: linear-gradient(to bottom, #212529 0%, rgba(33, 37, 41, 0) 90%) !important;
-    margin-bottom: 25px;
+  background: linear-gradient(
+    to bottom,
+    #212529 95%,
+    rgba(33, 37, 41, 0) 99%
+  ) !important;
+  margin-bottom: 25px;
+}
+
+.form-control {
+  background-color: #212529; /* Adjust the color as needed */
+  color: #fafafa;
+  border: none;
+}
+
+/* Flexbox layout for form fields */
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container p {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.form-container label {
+  width: 120px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 70%;
+}
+
+.list-item {
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.list-item:hover {
+  transform: scale(1.5);
+}
+
+.card {
+    border: 1px solid #fafafa
+}
+
+#submit-button {
+  max-width: 50%;
+  align-self: center;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse > ul > li > a {
+    font-size: larger;
+  }
 }
