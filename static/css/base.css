@@ -105,6 +105,10 @@ a:hover {
   border: none;
 }
 
+.portfolio-card {
+  margin-top: 25px;
+}
+
 #submit-button {
   max-width: 50%;
   align-self: center;
@@ -116,8 +120,8 @@ a:hover {
   border-radius: 50%;
 }
 
-.portfolio-card {
-  margin-top: 25px;
+#projects {
+  display: inline-grid;
 }
 
 @media (max-width: 767px) {
