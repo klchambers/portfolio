@@ -51,7 +51,7 @@ a:hover {
 }
 
 .page-content {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 .navbar {
@@ -153,6 +153,7 @@ a:hover {
     object-fit: cover;
     border-radius: 100%;
     transition: all 1s ease; /* Keep transition for zoom */
+    margin-bottom: 30px;
   }
   
   .overlay {
@@ -169,7 +170,7 @@ a:hover {
   }
   
   .portfolio-image:hover + .overlay {
-    opacity: 0.75;
+    opacity: 1;
   }
   
   .portfolio-image:hover {
