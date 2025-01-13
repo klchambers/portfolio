@@ -142,22 +142,42 @@ a:hover {
 }
 
 @media (min-width: 1200px) {
-  .portfolio-image {
-    width: 50%; /* Fixed width */
-    height: 100%; /* Fixed height */
-    object-fit: cover; /* Cover the area without stretching */
-    border-radius: 100%;
-    position: relative;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
-  }
 
-  .portfolio-image:hover {
-    border-radius: 3%; /* Remove the border-radius on hover */
-    z-index: 9999; /* Bring image to the front on hover */
-    transform: scale(1.25);
-    display: block;
+  .portfolio-card {
+    position: relative;
   }
+  
+  .portfolio-image {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    transition: all 1s ease; /* Keep transition for zoom */
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 998; /* Overlay above content but below the image */
+  }
+  
+  .portfolio-image:hover + .overlay {
+    opacity: 0.75;
+  }
+  
+  .portfolio-image:hover {
+    transform: scale(1.25); /* Zoom in */
+    border-radius: 3%; /* remove rounded corners */
+    z-index: 9999; /* Bring image to the front */
+  }
+  
+  
+  
 }
