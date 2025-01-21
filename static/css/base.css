@@ -124,7 +124,28 @@ a:hover {
   display: inline-grid;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  /* Form */
+  .form-container input,
+  .form-container textarea {
+    width: 90%;  /* Take up more width on smaller screens */
+    margin: 0 auto; /* Center the input fields */
+  }
+
+  .form-container p {
+    display: block; /* Stack the label and input vertically */
+    margin-bottom: 10px;
+  }
+
+  /* Adjusting form label positioning */
+  .form-container label {
+    width: auto; /* Let the label take up only the space it needs */
+    text-align: left; /* Align labels to the left on smaller screens */
+    margin-bottom: 5px; /* Add a small space below the label */
+  }
+}
+
+@media (max-width: 992px) {
   /* Projects section */
   .portfolio-image {
     width: 95%; /* Image takes more space on smaller screens */
@@ -134,19 +155,13 @@ a:hover {
   .card-text {
     text-align: center;
   }
-  /* Form */
-  .form-container {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
-@media (min-width: 1200px) {
-
+@media (min-width: 992px) {
   .portfolio-card {
     position: relative;
   }
-  
+
   .portfolio-image {
     width: 50%;
     height: 100%;
@@ -155,7 +170,7 @@ a:hover {
     transition: all 1s ease; /* Keep transition for zoom */
     margin-bottom: 30px;
   }
-  
+
   .overlay {
     position: fixed;
     top: 0;
@@ -168,17 +183,14 @@ a:hover {
     transition: opacity 0.3s ease-in-out;
     z-index: 998; /* Overlay above content but below the image */
   }
-  
+
   .portfolio-image:hover + .overlay {
     opacity: 1;
   }
-  
+
   .portfolio-image:hover {
     transform: scale(1.25); /* Zoom in */
     border-radius: 3%; /* remove rounded corners */
     z-index: 9999; /* Bring image to the front */
   }
-  
-  
-  
 }
