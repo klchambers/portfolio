@@ -193,4 +193,21 @@ a:hover {
     border-radius: 3%; /* remove rounded corners */
     z-index: 9999; /* Bring image to the front */
   }
+
+  @-moz-document url-prefix() {
+    .portfolio-image {
+      /* Adjust flex behavior in Firefox */
+      flex-shrink: 0; /* Prevent shrinking of the image */
+      width: 50% !important; /* Enforce width of 50% for Firefox */
+      max-width: 100% !important; /* Make sure the image respects max-width */
+      min-width: 250px; /* Optional: Prevent image from getting too small */
+    }
+  
+    .card-body {
+      flex: 1;
+      padding: 15px;
+      text-align: left;
+      max-width: 50%; /* Ensure the body doesn't exceed 50% of the card width */
+    }
+  }
 }
