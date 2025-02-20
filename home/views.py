@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm
+from honeypot.decorators import check_honeypot
 from django.conf import settings
 from django.core.mail import send_mail
 from django.contrib import messages
 import logging
 
 
+@check_honeypot(field_name=settings.HONEYPOT_FIELD_NAME)
 def portfolio(request):
     # Handling contact form submission
     if request.method == 'POST':

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'honeypot',
 ]
 
 MIDDLEWARE = [
@@ -153,3 +154,7 @@ DEFAULT_TO_EMAIL = os.environ.get('DEFAULT_TO_EMAIL')
 
 # Secret Key
 SECRET_KEY = os.environ.get('SECRET_KEY')
+
+# Honeypot
+HONEYPOT_FIELD_NAME = os.environ.get('HONEYPOT_FIELD_NAME')
+HONEYPOT_VALUE = os.environ.get('HONEYPOT_VALUE')
